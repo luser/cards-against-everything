@@ -1,0 +1,16 @@
+# Notes on questions
+# 275 questions
+$ wc -l ../against-humanity/questions.txt
+275 ../against-humanity/questions.txt
+
+# 46 without a blank (16.7%)
+$ grep -v _ ../against-humanity/questions.txt | wc -l
+46
+
+# 51 with two blanks (18.5%)
+$ grep '_.*_' ../against-humanity/questions.txt | wc -l
+51
+
+# 178 with a single blank (64.7%)
+$ grep '^[^_]*_[^_]*$' ../against-humanity/questions.txt | wc -l
+178
